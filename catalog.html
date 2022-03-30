@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Страница каталога</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<style>
+		html {
+			position: relative;
+			overflow: hidden;
+		}
+
+		html::before {
+			content: 'Loading...';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			color: #fff;
+			font-size: 18px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: all .2s ease;
+			opacity: 1;
+			visibility: visible;
+			z-index: 101;
+		}
+
+		html::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: rgb(37, 37, 37);
+			transition: all .2s ease;
+			opacity: 1;
+			visibility: visible;
+			z-index: 100;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20220330000531">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body data-simplebar>
+	<div class="wrapper">
+		<header class="header" data-scroll="170" data-scroll-show>
+			<div class="header__container">
+				<div class="header__logo">
+					<a href="">
+						<picture><source srcset="img/header/logo.webp" type="image/webp"><img src="img/header/logo.png" alt=""></picture>
+					</a>
+				</div>
+				<div class="header__content">
+					<div class="header__top">
+						<div class="header__icons">
+							<a href="" class="header__icon header__icon-menu">
+								<svg class="header__icon-open" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.3333 11.9999V13.6666H2.16667V11.9999H11.3333ZM15.5 6.16658V7.83325H0.5V6.16658H15.5ZM13.8333 0.333252V1.99992H4.66667V0.333252H13.8333Z" fill="#09121F" />
+								</svg>
+								<svg class="header__icon-close" width="16" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.99999 5.58599L11.95 0.635986L13.364 2.04999L8.41399 6.99999L13.364 11.95L11.95 13.364L6.99999 8.41399L2.04999 13.364L0.635986 11.95L5.58599 6.99999L0.635986 2.04999L2.04999 0.635986L6.99999 5.58599Z" fill="#09121F" />
+								</svg>
+							</a>
+							<a href="" data-popup="#info" class="header__icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM9 9V15H11V9H9ZM9 5V7H11V5H9Z" fill="#1B1B1B" />
+								</svg>
+							</a>
+							<a href="tel:74956171424" class="header__icon">
+								<svg width="18" height="18" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 8.94667V11.304C12.0001 11.4728 11.9361 11.6353 11.8211 11.7588C11.706 11.8823 11.5484 11.9575 11.38 11.9693C11.0887 11.9893 10.8507 12 10.6667 12C4.77533 12 0 7.22467 0 1.33333C0 1.14933 0.01 0.911334 0.0306667 0.62C0.0424816 0.451629 0.117721 0.294007 0.241202 0.178939C0.364684 0.0638712 0.527215 -7.62887e-05 0.696 1.71053e-07H3.05333C3.13603 -8.35563e-05 3.2158 0.0305727 3.27715 0.0860136C3.33851 0.141455 3.37706 0.217722 3.38533 0.3C3.40067 0.453334 3.41467 0.575333 3.428 0.668C3.56049 1.59262 3.832 2.49189 4.23333 3.33533C4.29667 3.46867 4.25533 3.628 4.13533 3.71333L2.69667 4.74133C3.5763 6.79097 5.2097 8.42436 7.25933 9.304L8.286 7.868C8.32796 7.80933 8.38919 7.76725 8.459 7.7491C8.52881 7.73095 8.60277 7.73787 8.668 7.76867C9.51135 8.16924 10.4104 8.44008 11.3347 8.572C11.4273 8.58533 11.5493 8.6 11.7013 8.61467C11.7835 8.62309 11.8596 8.66171 11.9149 8.72305C11.9702 8.78439 12.0008 8.86408 12.0007 8.94667H12Z" fill="#000" />
+								</svg>
+							</a>
+						</div>
+						<nav class="header__menu" data-da=".popup__main, 991, last">
+							<ul>
+								<li class="header__menu-item"><a href="">О нас</a></li>
+								<li class="header__menu-item">
+									<a href="">Доставка и оплата</a>
+								</li>
+								<li class="header__menu-item"><a href="">Контакты</a></li>
+								<li class="header__menu-item"><a href="">Бонусы</a></li>
+								<li class="header__menu-item"><a href="">Вакансии</a></li>
+							</ul>
+						</nav>
+						<div class="header__timetable timetable-header" data-da=".popup__main, 991, last">
+							<div class="timetable-header__phone">
+								<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12 8.94667V11.304C12.0001 11.4728 11.9361 11.6353 11.8211 11.7588C11.706 11.8823 11.5484 11.9575 11.38 11.9693C11.0887 11.9893 10.8507 12 10.6667 12C4.77533 12 0 7.22467 0 1.33333C0 1.14933 0.01 0.911334 0.0306667 0.62C0.0424816 0.451629 0.117721 0.294007 0.241202 0.178939C0.364684 0.0638712 0.527215 -7.62887e-05 0.696 1.71053e-07H3.05333C3.13603 -8.35563e-05 3.2158 0.0305727 3.27715 0.0860136C3.33851 0.141455 3.37706 0.217722 3.38533 0.3C3.40067 0.453334 3.41467 0.575333 3.428 0.668C3.56049 1.59262 3.832 2.49189 4.23333 3.33533C4.29667 3.46867 4.25533 3.628 4.13533 3.71333L2.69667 4.74133C3.5763 6.79097 5.2097 8.42436 7.25933 9.304L8.286 7.868C8.32796 7.80933 8.38919 7.76725 8.459 7.7491C8.52881 7.73095 8.60277 7.73787 8.668 7.76867C9.51135 8.16924 10.4104 8.44008 11.3347 8.572C11.4273 8.58533 11.5493 8.6 11.7013 8.61467C11.7835 8.62309 11.8596 8.66171 11.9149 8.72305C11.9702 8.78439 12.0008 8.86408 12.0007 8.94667H12Z" fill="#E07153" />
+								</svg>
+								<a href="tel:74956171424" class="timetable-header__phone-number">
+									+7 (495) 617-14-24
+								</a>
+							</div>
+							<div class="timetable-header__time">c 10:00 до 23:00</div>
+						</div>
+						<div class="header__cart cart-header">
+							<div class="cart-header__sum">
+								<span class="cart-header__money">0</span> ₽
+							</div>
+							<a href="" class="cart-header__bag">
+								<svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9 0C9.65661 0 10.3068 0.129329 10.9134 0.380602C11.52 0.631876 12.0712 1.00017 12.5355 1.46447C12.9998 1.92876 13.3681 2.47995 13.6194 3.08658C13.8707 3.69321 14 4.34339 14 5V7H17C17.2652 7 17.5196 7.10536 17.7071 7.29289C17.8946 7.48043 18 7.73478 18 8V20C18 20.2652 17.8946 20.5196 17.7071 20.7071C17.5196 20.8946 17.2652 21 17 21H1C0.734784 21 0.48043 20.8946 0.292893 20.7071C0.105357 20.5196 0 20.2652 0 20V8C0 7.73478 0.105357 7.48043 0.292893 7.29289C0.48043 7.10536 0.734784 7 1 7H4V5C4 3.67392 4.52678 2.40215 5.46447 1.46447C6.40215 0.526784 7.67392 0 9 0V0ZM14 10H12V11C12.0003 11.2549 12.0979 11.5 12.2728 11.6854C12.4478 11.8707 12.687 11.9822 12.9414 11.9972C13.1958 12.0121 13.4464 11.9293 13.6418 11.7657C13.8373 11.6021 13.9629 11.3701 13.993 11.117L14 11V10ZM6 10H4V11C4.00028 11.2549 4.09788 11.5 4.27285 11.6854C4.44782 11.8707 4.68695 11.9822 4.94139 11.9972C5.19584 12.0121 5.44638 11.9293 5.64183 11.7657C5.83729 11.6021 5.9629 11.3701 5.993 11.117L6 11V10ZM9 2C8.23479 1.99996 7.49849 2.29233 6.94174 2.81728C6.38499 3.34224 6.04989 4.06011 6.005 4.824L6 5V7H12V5C12 4.23479 11.7077 3.49849 11.1827 2.94174C10.6578 2.38499 9.93989 2.04989 9.176 2.005L9 2Z" fill="#1B1B1B" />
+								</svg>
+								<span class="cart-header__num">0</span>
+							</a>
+						</div>
+						<div class="header__login" data-popup="#login">
+							<svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 21C0 18.8783 0.842855 16.8434 2.34315 15.3431C3.84344 13.8429 5.87827 13 8 13C10.1217 13 12.1566 13.8429 13.6569 15.3431C15.1571 16.8434 16 18.8783 16 21H0ZM8 12C4.685 12 2 9.315 2 6C2 2.685 4.685 0 8 0C11.315 0 14 2.685 14 6C14 9.315 11.315 12 8 12Z" fill="#1B1B1B" />
+							</svg>
+						</div>
+					</div>
+					<div class="header__bottom bottom-header" data-da=".header, 991, last">
+						<nav class="bottom-header__menu">
+							<ul>
+								<li class="bottom-header__item">
+									<a href="">
+										<picture><source srcset="img/icons/icons-menu/icon-pizza.webp" type="image/webp"><img src="img/icons/icons-menu/icon-pizza.png" alt="" /></picture>
+										<div class="bottom-header__name">Пицца</div>
+									</a>
+								</li>
+								<li class="bottom-header__item">
+									<a href="">
+										<picture><source srcset="img/icons/icons-menu/icon-sushi.webp" type="image/webp"><img src="img/icons/icons-menu/icon-sushi.png" alt="" /></picture>
+										<div class="bottom-header__name">Суши</div>
+									</a>
+								</li>
+								<li class="bottom-header__item">
+									<a href="">
+										<picture><source srcset="img/icons/icons-menu/icon-rolle.webp" type="image/webp"><img src="img/icons/icons-menu/icon-rolle.png" alt="" /></picture>
+										<div class="bottom-header__name">Роллы</div>
+									</a>
+								</li>
+								<li class="bottom-header__item">
+									<a href="">
+										<picture><source srcset="img/icons/icons-menu/icon-set.webp" type="image/webp"><img src="img/icons/icons-menu/icon-set.png" alt="" /></picture>
+										<div class="bottom-header__name">Сеты</div>
+									</a>
+								</li>
+								<li class="bottom-header__item">
+									<a href="">
+										<picture><source srcset="img/icons/icons-menu/icon-wok.webp" type="image/webp"><img src="img/icons/icons-menu/icon-wok.png" alt="" /></picture>
+										<div class="bottom-header__name">Wok</div>
+									</a>
+								</li>
+								<li class="bottom-header__item">
+									<a href="">
+										<picture><source srcset="img/icons/icons-menu/icon-soup.webp" type="image/webp"><img src="img/icons/icons-menu/icon-soup.png" alt="" /></picture>
+										<div class="bottom-header__name">Супы</div>
+									</a>
+								</li>
+								<li class="bottom-header__item">
+									<a href="">
+										<picture><source srcset="img/icons/icons-menu/icon-salat.webp" type="image/webp"><img src="img/icons/icons-menu/icon-salat.png" alt="" /></picture>
+										<div class="bottom-header__name">Салаты</div>
+									</a>
+								</li>
+								<li class="bottom-header__item">
+									<a href="">
+										<picture><source srcset="img/icons/icons-menu/icon-dessert.webp" type="image/webp"><img src="img/icons/icons-menu/icon-dessert.png" alt="" /></picture>
+										<div class="bottom-header__name">Десерты</div>
+									</a>
+								</li>
+								<li class="bottom-header__item">
+									<a href="">
+										<picture><source srcset="img/icons/icons-menu/icon-drink.webp" type="image/webp"><img src="img/icons/icons-menu/icon-drink.png" alt="" /></picture>
+										<div class="bottom-header__name">Напитки</div>
+									</a>
+								</li>
+								<li class="bottom-header__item">
+									<a href="">
+										<picture><source srcset="img/icons/icons-menu/icon-sale.webp" type="image/webp"><img src="img/icons/icons-menu/icon-sale.png" alt="" /></picture>
+										<div class="bottom-header__name">Акции</div>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="catalog">
+				<div class="catalog__container">
+					<div class="catalog__top">
+						<div class="catalog__bredcrumbs bredcrumbs-catalog">
+							<a href="" class="bredcrumbs-catalog__link">Главная</a>
+							<div class="bredcrumbs-catalog__link bredcrumbs-catalog__link-current">
+								Суши
+							</div>
+						</div>
+						<h1 class="catalog__title title">Суши</h1>
+						<div class="catalog__filter filter-catalog">
+							<div class="filter-catalog__wrap" data-da=".filter__main, 650, first">
+								<div class="filter-catalog__items">
+									<div class="filter-catalog__checkbox">
+										<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+										<label for="c_1" class="checkbox__label">
+											<picture><source srcset="img/products/losos.webp" type="image/webp"><img src="img/products/losos.png" alt="" /></picture>
+											<span class="checkbox__text">Лосось</span></label>
+									</div>
+									<div class="filter-catalog__checkbox">
+										<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+										<label for="c_2" class="checkbox__label">
+											<picture><source srcset="img/products/tunec.webp" type="image/webp"><img src="img/products/tunec.png" alt="" /></picture>
+											<span class="checkbox__text">Тунец</span></label>
+									</div>
+									<div class="filter-catalog__checkbox">
+										<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3" name="form[]" />
+										<label for="c_3" class="checkbox__label">
+											<picture><source srcset="img/products/ugor.webp" type="image/webp"><img src="img/products/ugor.png" alt="" /></picture>
+											<span class="checkbox__text">Угорь</span></label>
+									</div>
+									<div class="filter-catalog__checkbox">
+										<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="4" name="form[]" />
+										<label for="c_4" class="checkbox__label">
+											<picture><source srcset="img/products/krevetka.webp" type="image/webp"><img src="img/products/krevetka.png" alt="" /></picture>
+											<span class="checkbox__text">Креветка</span></label>
+									</div>
+									<div class="filter-catalog__checkbox">
+										<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="5" name="form[]" />
+										<label for="c_5" class="checkbox__label">
+											<picture><source srcset="img/products/krab.webp" type="image/webp"><img src="img/products/krab.png" alt="" /></picture>
+											<span class="checkbox__text">Краб</span></label>
+									</div>
+									<div class="filter-catalog__checkbox">
+										<input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="6" name="form[]" />
+										<label for="c_6" class="checkbox__label">
+											<picture><source srcset="img/products/midii.webp" type="image/webp"><img src="img/products/midii.png" alt="" /></picture>
+											<span class="checkbox__text">Мидии</span></label>
+									</div>
+								</div>
+								<div class="filter-catalog__items">
+									<div class="filter-catalog__checkbox">
+										<input id="r_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+										<label for="r_1" class="checkbox__label">
+											<picture><source srcset="img/carts/state/spicy.webp" type="image/webp"><img src="img/carts/state/spicy.png" alt="" /></picture>
+											<span class="checkbox__text">Острое</span></label>
+									</div>
+									<div class="filter-catalog__checkbox">
+										<input id="r_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+										<label for="r_2" class="checkbox__label">
+											<picture><source srcset="img/carts/state/hot.webp" type="image/webp"><img src="img/carts/state/hot.png" alt="" /></picture>
+											<span class="checkbox__text">Запеченный рол</span></label>
+									</div>
+									<div class="filter-catalog__checkbox">
+										<input id="r_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="3" name="form[]" />
+										<label for="r_3" class="checkbox__label">
+											<picture><source srcset="img/carts/state/vegan.webp" type="image/webp"><img src="img/carts/state/vegan.png" alt="" /></picture>
+											<span class="checkbox__text">Vegan</span></label>
+									</div>
+									<div class="filter-catalog__checkbox">
+										<input id="r_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="4" name="form[]" />
+										<label for="r_4" class="checkbox__label">
+											<picture><source srcset="img/carts/state/Top.webp" type="image/webp"><img src="img/carts/state/Top.png" alt="" /></picture>
+											<span class="checkbox__text">ТОП-позиции</span></label>
+									</div>
+									<div class="filter-catalog__checkbox">
+										<input id="r_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="5" name="form[]" />
+										<label for="r_5" class="checkbox__label">
+											<picture><source srcset="img/carts/state/New.webp" type="image/webp"><img src="img/carts/state/New.png" alt="" /></picture>
+											<span class="checkbox__text">Новинки</span></label>
+									</div>
+									<div class="filter-catalog__checkbox">
+										<input id="r_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="6" name="form[]" />
+										<label for="r_6" class="checkbox__label">
+											<picture><source srcset="img/carts/state/Sale.webp" type="image/webp"><img src="img/carts/state/Sale.png" alt="" /></picture>
+											<span class="checkbox__text">Скидки</span></label>
+									</div>
+								</div>
+							</div>
+							<div class="filter-catalog__sort sort-filter">
+								<div class="sort-filter__text">Сортировка</div>
+								<select name="form[]" class="form">
+									<option value="1" selected>По умолчанию</option>
+									<option value="2">
+										По цене (сначала дешевые)
+									</option>
+									<option value="3">
+										По цене (сначала дорогие)
+									</option>
+									<option value="4">По дате публикации</option>
+								</select>
+							</div>
+							<div class="filter-catalog__button button-filter" data-popup="#filter">
+								<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.3333 11.9999V13.6666H2.16667V11.9999H11.3333ZM15.5 6.16658V7.83325H0.5V6.16658H15.5ZM13.8333 0.333252V1.99992H4.66667V0.333252H13.8333Z" fill="#E07153" />
+								</svg>
+								Фильтр
+								<img src="img/icons/icon-arrow-down.svg" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="catalog__main">
+						<div class="catalog__wrapper">
+							<div class="top__cart cart">
+								<div class="cart__image">
+									<a href="" class="top__image-ibg">
+										<div class="cart__image-wrap">
+											<picture><source srcset="img/carts/item-1.webp" type="image/webp"><img src="img/carts/item-1.png" alt="" /></picture>
+										</div>
+									</a>
+									<div class="cart__states">
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/spicy.webp" type="image/webp"><img src="img/carts/state/spicy.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Острое
+											</div>
+										</div>
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/hot.webp" type="image/webp"><img src="img/carts/state/hot.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Горячий ролл
+											</div>
+										</div>
+									</div>
+									<div class="cart__notes">
+										<div class="cart__notes-item">Top</div>
+									</div>
+								</div>
+								<div class="cart__content">
+									<div class="cart__info">
+										<div class="cart__weight">200 грамм</div>
+										<div class="cart__callories">130 Ккал</div>
+									</div>
+									<h2 class="cart__name">
+										<a href="">Ролл "Филадельфия"</a>
+									</h2>
+									<div class="cart__ingridients">
+										Лосось, сыр "Филадельфия", огурец, авокадо
+									</div>
+									<div class="cart__bottom">
+										<div class="cart__prices">
+											<div class="cart__prices-old">269 ₽</div>
+											<div class="cart__prices-current">
+												219 ₽
+											</div>
+										</div>
+										<a href="" class="cart__button">
+											<span class="button _decor">Заказать</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="top__cart cart">
+								<div class="cart__image">
+									<a href="" class="top__image-ibg">
+										<div class="cart__image-wrap">
+											<picture><source srcset="img/carts/item-1.webp" type="image/webp"><img src="img/carts/item-1.png" alt="" /></picture>
+										</div>
+									</a>
+									<div class="cart__states">
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/spicy.webp" type="image/webp"><img src="img/carts/state/spicy.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Острое
+											</div>
+										</div>
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/hot.webp" type="image/webp"><img src="img/carts/state/hot.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Горячий ролл
+											</div>
+										</div>
+									</div>
+									<div class="cart__notes">
+										<div class="cart__notes-item">Top</div>
+									</div>
+								</div>
+								<div class="cart__content">
+									<div class="cart__info">
+										<div class="cart__weight">200 грамм</div>
+										<div class="cart__callories">130 Ккал</div>
+									</div>
+									<h2 class="cart__name">
+										<a href="">Ролл "Филадельфия"</a>
+									</h2>
+									<div class="cart__ingridients">
+										Лосось, сыр "Филадельфия", огурец, авокадо
+									</div>
+									<div class="cart__bottom">
+										<div class="cart__prices">
+											<div class="cart__prices-old">269 ₽</div>
+											<div class="cart__prices-current">
+												219 ₽
+											</div>
+										</div>
+										<a href="" class="cart__button">
+											<span class="button _decor">Заказать</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="top__cart cart">
+								<div class="cart__image">
+									<a href="" class="top__image-ibg">
+										<div class="cart__image-wrap">
+											<picture><source srcset="img/carts/item-1.webp" type="image/webp"><img src="img/carts/item-1.png" alt="" /></picture>
+										</div>
+									</a>
+									<div class="cart__states">
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/spicy.webp" type="image/webp"><img src="img/carts/state/spicy.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Острое
+											</div>
+										</div>
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/hot.webp" type="image/webp"><img src="img/carts/state/hot.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Горячий ролл
+											</div>
+										</div>
+									</div>
+									<div class="cart__notes">
+										<div class="cart__notes-item">Top</div>
+									</div>
+								</div>
+								<div class="cart__content">
+									<div class="cart__info">
+										<div class="cart__weight">200 грамм</div>
+										<div class="cart__callories">130 Ккал</div>
+									</div>
+									<h2 class="cart__name">
+										<a href="">Ролл "Филадельфия"</a>
+									</h2>
+									<div class="cart__ingridients">
+										Лосось, сыр "Филадельфия", огурец, авокадо
+									</div>
+									<div class="cart__bottom">
+										<div class="cart__prices">
+											<div class="cart__prices-old">269 ₽</div>
+											<div class="cart__prices-current">
+												219 ₽
+											</div>
+										</div>
+										<a href="" class="cart__button">
+											<span class="button _decor">Заказать</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="top__cart cart">
+								<div class="cart__image">
+									<a href="" class="top__image-ibg">
+										<div class="cart__image-wrap">
+											<picture><source srcset="img/carts/item-1.webp" type="image/webp"><img src="img/carts/item-1.png" alt="" /></picture>
+										</div>
+									</a>
+									<div class="cart__states">
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/spicy.webp" type="image/webp"><img src="img/carts/state/spicy.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Острое
+											</div>
+										</div>
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/hot.webp" type="image/webp"><img src="img/carts/state/hot.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Горячий ролл
+											</div>
+										</div>
+									</div>
+									<div class="cart__notes">
+										<div class="cart__notes-item">Top</div>
+									</div>
+								</div>
+								<div class="cart__content">
+									<div class="cart__info">
+										<div class="cart__weight">200 грамм</div>
+										<div class="cart__callories">130 Ккал</div>
+									</div>
+									<h2 class="cart__name">
+										<a href="">Ролл "Филадельфия"</a>
+									</h2>
+									<div class="cart__ingridients">
+										Лосось, сыр "Филадельфия", огурец, авокадо
+									</div>
+									<div class="cart__bottom">
+										<div class="cart__prices">
+											<div class="cart__prices-old">269 ₽</div>
+											<div class="cart__prices-current">
+												219 ₽
+											</div>
+										</div>
+										<a href="" class="cart__button">
+											<span class="button _decor">Заказать</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="top__cart cart">
+								<div class="cart__image">
+									<a href="" class="top__image-ibg">
+										<div class="cart__image-wrap">
+											<picture><source srcset="img/carts/item-1.webp" type="image/webp"><img src="img/carts/item-1.png" alt="" /></picture>
+										</div>
+									</a>
+									<div class="cart__states">
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/spicy.webp" type="image/webp"><img src="img/carts/state/spicy.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Острое
+											</div>
+										</div>
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/hot.webp" type="image/webp"><img src="img/carts/state/hot.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Горячий ролл
+											</div>
+										</div>
+									</div>
+									<div class="cart__notes">
+										<div class="cart__notes-item">Top</div>
+									</div>
+								</div>
+								<div class="cart__content">
+									<div class="cart__info">
+										<div class="cart__weight">200 грамм</div>
+										<div class="cart__callories">130 Ккал</div>
+									</div>
+									<h2 class="cart__name">
+										<a href="">Ролл "Филадельфия"</a>
+									</h2>
+									<div class="cart__ingridients">
+										Лосось, сыр "Филадельфия", огурец, авокадо
+									</div>
+									<div class="cart__bottom">
+										<div class="cart__prices">
+											<div class="cart__prices-old">269 ₽</div>
+											<div class="cart__prices-current">
+												219 ₽
+											</div>
+										</div>
+										<a href="" class="cart__button">
+											<span class="button _decor">Заказать</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="top__cart cart">
+								<div class="cart__image">
+									<a href="" class="top__image-ibg">
+										<div class="cart__image-wrap">
+											<picture><source srcset="img/carts/item-1.webp" type="image/webp"><img src="img/carts/item-1.png" alt="" /></picture>
+										</div>
+									</a>
+									<div class="cart__states">
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/spicy.webp" type="image/webp"><img src="img/carts/state/spicy.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Острое
+											</div>
+										</div>
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/hot.webp" type="image/webp"><img src="img/carts/state/hot.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Горячий ролл
+											</div>
+										</div>
+									</div>
+									<div class="cart__notes">
+										<div class="cart__notes-item">Top</div>
+									</div>
+								</div>
+								<div class="cart__content">
+									<div class="cart__info">
+										<div class="cart__weight">200 грамм</div>
+										<div class="cart__callories">130 Ккал</div>
+									</div>
+									<h2 class="cart__name">
+										<a href="">Ролл "Филадельфия"</a>
+									</h2>
+									<div class="cart__ingridients">
+										Лосось, сыр "Филадельфия", огурец, авокадо
+									</div>
+									<div class="cart__bottom">
+										<div class="cart__prices">
+											<div class="cart__prices-old">269 ₽</div>
+											<div class="cart__prices-current">
+												219 ₽
+											</div>
+										</div>
+										<a href="" class="cart__button">
+											<span class="button _decor">Заказать</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="top__cart cart">
+								<div class="cart__image">
+									<a href="" class="top__image-ibg">
+										<div class="cart__image-wrap">
+											<picture><source srcset="img/carts/item-1.webp" type="image/webp"><img src="img/carts/item-1.png" alt="" /></picture>
+										</div>
+									</a>
+									<div class="cart__states">
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/spicy.webp" type="image/webp"><img src="img/carts/state/spicy.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Острое
+											</div>
+										</div>
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/hot.webp" type="image/webp"><img src="img/carts/state/hot.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Горячий ролл
+											</div>
+										</div>
+									</div>
+									<div class="cart__notes">
+										<div class="cart__notes-item">Top</div>
+									</div>
+								</div>
+								<div class="cart__content">
+									<div class="cart__info">
+										<div class="cart__weight">200 грамм</div>
+										<div class="cart__callories">130 Ккал</div>
+									</div>
+									<h2 class="cart__name">
+										<a href="">Ролл "Филадельфия"</a>
+									</h2>
+									<div class="cart__ingridients">
+										Лосось, сыр "Филадельфия", огурец, авокадо
+									</div>
+									<div class="cart__bottom">
+										<div class="cart__prices">
+											<div class="cart__prices-old">269 ₽</div>
+											<div class="cart__prices-current">
+												219 ₽
+											</div>
+										</div>
+										<a href="" class="cart__button">
+											<span class="button _decor">Заказать</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="top__cart cart">
+								<div class="cart__image">
+									<a href="" class="top__image-ibg">
+										<div class="cart__image-wrap">
+											<picture><source srcset="img/carts/item-1.webp" type="image/webp"><img src="img/carts/item-1.png" alt="" /></picture>
+										</div>
+									</a>
+									<div class="cart__states">
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/spicy.webp" type="image/webp"><img src="img/carts/state/spicy.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Острое
+											</div>
+										</div>
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/hot.webp" type="image/webp"><img src="img/carts/state/hot.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Горячий ролл
+											</div>
+										</div>
+									</div>
+									<div class="cart__notes">
+										<div class="cart__notes-item">Top</div>
+									</div>
+								</div>
+								<div class="cart__content">
+									<div class="cart__info">
+										<div class="cart__weight">200 грамм</div>
+										<div class="cart__callories">130 Ккал</div>
+									</div>
+									<h2 class="cart__name">
+										<a href="">Ролл "Филадельфия"</a>
+									</h2>
+									<div class="cart__ingridients">
+										Лосось, сыр "Филадельфия", огурец, авокадо
+									</div>
+									<div class="cart__bottom">
+										<div class="cart__prices">
+											<div class="cart__prices-old">269 ₽</div>
+											<div class="cart__prices-current">
+												219 ₽
+											</div>
+										</div>
+										<a href="" class="cart__button">
+											<span class="button _decor">Заказать</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="top__cart cart">
+								<div class="cart__image">
+									<a href="" class="top__image-ibg">
+										<div class="cart__image-wrap">
+											<picture><source srcset="img/carts/item-1.webp" type="image/webp"><img src="img/carts/item-1.png" alt="" /></picture>
+										</div>
+									</a>
+									<div class="cart__states">
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/spicy.webp" type="image/webp"><img src="img/carts/state/spicy.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Острое
+											</div>
+										</div>
+										<div class="cart__states-item">
+											<div class="cart__states-item__image">
+												<picture><source srcset="img/carts/state/hot.webp" type="image/webp"><img src="img/carts/state/hot.png" alt="" /></picture>
+											</div>
+											<div class="cart__states-item__text">
+												Горячий ролл
+											</div>
+										</div>
+									</div>
+									<div class="cart__notes">
+										<div class="cart__notes-item">Top</div>
+									</div>
+								</div>
+								<div class="cart__content">
+									<div class="cart__info">
+										<div class="cart__weight">200 грамм</div>
+										<div class="cart__callories">130 Ккал</div>
+									</div>
+									<h2 class="cart__name">
+										<a href="">Ролл "Филадельфия"</a>
+									</h2>
+									<div class="cart__ingridients">
+										Лосось, сыр "Филадельфия", огурец, авокадо
+									</div>
+									<div class="cart__bottom">
+										<div class="cart__prices">
+											<div class="cart__prices-old">269 ₽</div>
+											<div class="cart__prices-current">
+												219 ₽
+											</div>
+										</div>
+										<a href="" class="cart__button">
+											<span class="button _decor">Заказать</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="bio catalog-bio">
+				<div class="bio__container">
+					<div class="bio__info">
+						<div class="catalog__title title">
+							Доставка суши и роллов в Краснодаре
+						</div>
+						<div class="bio__text">
+							<p>
+								Почему роллы с океанической рыбой, овощами и
+								японскими деликаттесами стали любимым блюдом многих
+								россиян? Во-первых, это очень полезно. Суши – это
+								идеально сбалансированная пища, многое на полезные
+								жиры, белки и витамины. Во-вторых, суше хорошо
+								утоляют голод.
+							</p>
+							<p>
+								Вкусная доставка Рикша подарит Вам незабываемые
+								вкусовые впечатления, украсит любой ваш стол и не
+								заставит себя долго ждать. С нами вы сможете забыть о
+								готовке, легко сделать приятное родным и близким,
+								устроить вкусный праздник или расслабится в кругу
+								друзей. Все блюда готовятся исключительно из свежих
+								продуктов и по оригинальным рецептам Нашего
+								шеф-повара. Любая позиция из Нашего Меню может
+								оказаться у Вас на столе максимум через 60 минут! У
+								вас есть возможность сделать предварительный заказ на
+								определенный день и время.
+							</p>
+						</div>
+					</div>
+					<div class="bio__images catalog__images">
+						<div class="bio__image-ibg">
+							<div class="bio__image-wrap">
+								<picture><source srcset="img/bio/bio-1.webp" type="image/webp"><img src="img/bio/bio-1.png" alt="" /></picture>
+							</div>
+						</div>
+						<div class="bio__image-wrap bio__image-small">
+							<div class="bio__image-ibg bio__image-small-wrap">
+								<picture><source srcset="img/bio/bio-2.webp" type="image/webp"><img src="img/bio/bio-2.png" alt="" /></picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__part logo-footer">
+					<a href="" class="footer__logo">
+						<picture><source srcset="img/footer/logo.webp" type="image/webp"><img src="img/footer/logo.png" alt="" /></picture>
+					</a>
+				</div>
+				<div class="footer__part social-footer">
+					<div class="social-footer__num">
+
+					</div>
+					<div class="social-footer__top" data-da=".contacts-footer, 500, first">
+						<ul>
+							<li>
+								<a href="">О нас</a>
+							</li>
+							<li>
+								<a href="">Доставка и оплата</a>
+							</li>
+							<li>
+								<a href="">Контакты</a>
+							</li>
+						</ul>
+					</div>
+					<div class="social-footer__bottom">
+						<div class="social-footer__link">
+							<a href="">
+								<img src="img/footer/social/1.svg" alt="" />
+							</a>
+							<a href="">
+								<img src="img/footer/social/2.svg" alt="" />
+							</a>
+							<a href="">
+								<img src="img/footer/social/3.svg" alt="" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__part list-footer">
+					<ul class="list-footer__wrap">
+						<li class="list-footer__item">
+							<a href="">Пицца</a>
+						</li>
+						<li class="list-footer__item">
+							<a href="">Суши</a>
+						</li>
+						<li class="list-footer__item">
+							<a href="">Роллы</a>
+						</li>
+						<li class="list-footer__item">
+							<a href="">Сеты</a>
+						</li>
+						<li class="list-footer__item">
+							<a href="">Wok</a>
+						</li>
+						<li class="list-footer__item">
+							<a href="">Супы</a>
+						</li>
+						<li class="list-footer__item">
+							<a href="">Салаты</a>
+						</li>
+						<li class="list-footer__item">
+							<a href="">Десерты</a>
+						</li>
+						<li class="list-footer__item">
+							<a href="">Напитки</a>
+						</li>
+						<li class="list-footer__item">
+							<a href="">Акции</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__part contacts-footer">
+					<a href="tel:74956171424" class="contacts-footer__number" data-da=".social-footer__num, 500, 0">+7 (495) 617-14-24</a>
+					<div class="contacts-footer__timtable" data-da=".social-footer__num, 500, 1">c 10:00 до 23:00</div>
+					<div class="contacts-footer__copy">© Рикша. Все права защищены.</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<div id="info" aria-hidden="true" class="popup popup__info">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">
+					<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.99999 5.58599L11.95 0.635986L13.364 2.04999L8.41399 6.99999L13.364 11.95L11.95 13.364L6.99999 8.41399L2.04999 13.364L0.635986 11.95L5.58599 6.99999L0.635986 2.04999L2.04999 0.635986L6.99999 5.58599Z" fill="#09121F" />
+					</svg>
+				</button>
+				<div class="popup__title">Информация</div>
+				<div class="popup__main">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="filter" aria-hidden="true" class="popup popup__info">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">
+					<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.99999 5.58599L11.95 0.635986L13.364 2.04999L8.41399 6.99999L13.364 11.95L11.95 13.364L6.99999 8.41399L2.04999 13.364L0.635986 11.95L5.58599 6.99999L0.635986 2.04999L2.04999 0.635986L6.99999 5.58599Z" fill="#09121F" />
+					</svg>
+				</button>
+				<div class="popup__title">Фильтр</div>
+				<div class="filter__main">
+
+
+					<a href="" class="filter__btn _decor button">
+						Применить
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="login" aria-hidden="true" class="popup popup__login">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">
+					<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.99999 5.58599L11.95 0.635986L13.364 2.04999L8.41399 6.99999L13.364 11.95L11.95 13.364L6.99999 8.41399L2.04999 13.364L0.635986 11.95L5.58599 6.99999L0.635986 2.04999L2.04999 0.635986L6.99999 5.58599Z" fill="#09121F" />
+					</svg>
+				</button>
+				<div class="popup__title">Вход в кабинет</div>
+				<div class="popup__main-login">
+					<form action="">
+						<input type="text" placeholder="Телефон">
+						<button type="submit" class="button _decor">Отправить код</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220330000531"></script>
+</body>
+
+</html>
