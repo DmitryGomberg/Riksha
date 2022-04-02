@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>404 Ошибка</title>
+	<title>Страница карточик товара</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<style>
@@ -49,7 +49,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body data-simplebar>
+<body>
 	<div class="wrapper">
 		<header class="header" data-scroll="170" data-scroll-show>
 			<div class="header__container">
@@ -189,24 +189,123 @@
 			</div>
 		</header>
 
-		<main class="page">
-			<section class="error">
-				<div class="error__container">
-					<div class="error__main">
-						4
-						<picture><source srcset="img/404/0.webp" type="image/webp"><img src="img/404/0.png" alt="" /></picture>
-						4
+		<main class="page page__card">
+			<div class="page__card-menu menu-page">
+				<div class="menu-page__container container">
+					<div class="menu-page__line">
+						<a href="">
+							<img src="img/icons/icon-slider-arrow.svg" alt="" />
+							<span>Назад в каталог</span>
+						</a>
 					</div>
-					<div class="error__info info-error">
-						<div class="info-error__name">Страница не найдена</div>
-						<div class="info-error__text">
-							Извините, но страницу, которую Вы пытаетесь найти - не
-							существует. Предлагаем Вам перейти на Главную страницу
+				</div>
+			</div>
+			<section class="product">
+				<div class="product__container">
+					<div class="product__wrapper">
+						<div class="product__images images-product">
+							<div class="images-product__slider swiper">
+								<div class="images-product__wrapper swiper-wrapper">
+									<div class="images-product__slide swiper-slide">
+										<a href="" class="images-product__image-ibg">
+											<picture><source srcset="img/carts/item-1.webp" type="image/webp"><img src="img/carts/item-1.png" alt="" /></picture>
+										</a>
+									</div>
+									<div class="images-product__slide swiper-slide">
+										<a href="" class="images-product__image-ibg">
+											<picture><source srcset="img/carts/item-1.webp" type="image/webp"><img src="img/carts/item-1.png" alt="" /></picture>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="product__navigation navigation-arrow product__navigation-prev">
+								<svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M32.5303 5.46967C32.8232 5.76256 32.8232 6.23744 32.5303 6.53033L27.7574 11.3033C27.4645 11.5962 26.9896 11.5962 26.6967 11.3033C26.4038 11.0104 26.4038 10.5355 26.6967 10.2426L30.9393 6L26.6967 1.75736C26.4038 1.46447 26.4038 0.989593 26.6967 0.696699C26.9896 0.403806 27.4645 0.403806 27.7574 0.696699L32.5303 5.46967ZM0 5.25L32 5.25V6.75L0 6.75L0 5.25Z" fill="#C95C3F" />
+								</svg>
+							</div>
+							<div class="product__navigation navigation-arrow product__navigation-next">
+								<svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M32.5303 5.46967C32.8232 5.76256 32.8232 6.23744 32.5303 6.53033L27.7574 11.3033C27.4645 11.5962 26.9896 11.5962 26.6967 11.3033C26.4038 11.0104 26.4038 10.5355 26.6967 10.2426L30.9393 6L26.6967 1.75736C26.4038 1.46447 26.4038 0.989593 26.6967 0.696699C26.9896 0.403806 27.4645 0.403806 27.7574 0.696699L32.5303 5.46967ZM0 5.25L32 5.25V6.75L0 6.75L0 5.25Z" fill="#C95C3F" />
+								</svg>
+							</div>
 						</div>
-						<a href="Riksha/home.html" class="info-error__btn _decor">На главную</a>
+						<div class="product__info info-product">
+							<div class="info-product__name">Ролл "Филадельфия"</div>
+							<div class="info-product__table table-product">
+								<div class="table-product__text"><b>Вес:</b> 200 грамм</div>
+								<div class="table-product__inner">
+									<div class="table-product__part">
+										<div class="table-product__part-text">
+											Белки
+										</div>
+										<div class="table-product__part-value">
+											7,5 г
+										</div>
+									</div>
+									<div class="table-product__part">
+										<div class="table-product__part-text">
+											Углеводы
+										</div>
+										<div class="table-product__part-value">
+											16,6 г
+										</div>
+									</div>
+									<div class="table-product__part">
+										<div class="table-product__part-text">
+											Жиры
+										</div>
+										<div class="table-product__part-value">
+											3,8 г
+										</div>
+									</div>
+									<div class="table-product__part">
+										<div class="table-product__part-text">
+											Калорийность
+										</div>
+										<div class="table-product__part-value">
+											213 Ккал
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="info-product__delivery delivery-product">
+								<div class="delivery-product__icon">
+									<img src="img/icons/delivery.svg" alt="">
+								</div>
+								<div class="delivery-product__text">Доставим за 40 мин</div>
+								<a href="" class="delivery-product__link">Условия доставки</a>
+							</div>
+							<div class="info-product__composition composition-product">
+								<div class="composition-product__text">
+									Состав:
+								</div>
+								<div class="composition-product__main">
+									Лосось, сыр "Филадельфия", огурец, авокадо
+								</div>
+							</div>
+							<div class="info-product__footer footer-product">
+								<div class="footer-product__price">
+									<div class="footer-product__price-old">269 ₽</div>
+									<div class="footer-product__price-current">219 ₽ </div>
+								</div>
+								<div class="footer-product__quantity">
+									<div class="quantity">
+										<button type="button" class="quantity__button quantity__button_minus">-</button>
+										<div class="quantity__input">
+											<input autocomplete="off" type="text" name="form[]" value="1">
+										</div>
+										<button type="button" class="quantity__button quantity__button_plus">+</button>
+									</div>
+								</div>
+								<div class="footer-product__btn">
+									<a href="" class="_decor button">Заказать</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
+
 		</main>
 		<footer class="footer">
 			<div class="footer__container">

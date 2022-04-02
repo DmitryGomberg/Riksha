@@ -98,6 +98,9 @@
         if (target.hidden) return _slideDown(target, duration); else return _slideUp(target, duration);
     };
     let bodyLockStatus = true;
+    let bodyLockToggle = (delay = 500) => {
+        if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
+    };
     let bodyUnlock = (delay = 500) => {
         let body = document.querySelector("body");
         if (bodyLockStatus) {
@@ -588,6 +591,19 @@
             return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
         }
     };
+    function formQuantity() {
+        document.addEventListener("click", (function(e) {
+            let targetElement = e.target;
+            if (targetElement.closest(".quantity__button")) {
+                let value = parseInt(targetElement.closest(".quantity").querySelector("input").value);
+                if (targetElement.classList.contains("quantity__button_plus")) value++; else {
+                    --value;
+                    if (value < 1) value = 1;
+                }
+                targetElement.closest(".quantity").querySelector("input").value = value;
+            }
+        }));
+    }
     class SelectConstructor {
         constructor(props, data = null) {
             let defaultConfig = {
@@ -4596,6 +4612,30 @@
             },
             on: {}
         });
+        if (document.querySelector(".images-product__slider")) new core(".images-product__slider", {
+            modules: [ Navigation ],
+            slidesPerView: 1,
+            spaceBetween: 24,
+            autoHeight: true,
+            speed: 200,
+            preloadImages: false,
+            lazy: true,
+            navigation: {
+                prevEl: ".product__navigation-prev",
+                nextEl: ".product__navigation-next"
+            },
+            breakpoints: {
+                700: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1
+                },
+                1070: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1
+                }
+            },
+            on: {}
+        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();
@@ -6399,16 +6439,18 @@ PERFORMANCE OF THIS SOFTWARE.
     };
     const da = new DynamicAdapt("max");
     da.init();
+    const openMenu = document.querySelector(".header__icon-menu");
+    openMenu.addEventListener("click", (function openHeadMenu(e) {
+        e.preventDefault();
+        const menu = document.querySelector(".bottom-header");
+        menu.classList.toggle("_active");
+        openMenu.classList.toggle("_active");
+        bodyLockToggle();
+    }));
     window["FLS"] = true;
     isWebp();
     addLoadedClass();
     tabs();
+    formQuantity();
     headerScroll();
-    const openMenu = document.querySelector(".header__icon-menu");
-    openMenu.addEventListener("click", (function openHeadMenu(e) {
-        const menu = document.querySelector(".bottom-header");
-        menu.classList.toggle("_active");
-        openMenu.classList.toggle("_active");
-        e.preventDefault();
-    }));
 })();
